@@ -10,7 +10,7 @@ on:
       - main
       - develop
   schedule:
-    - cron: "0 0 * * 1"  # Tous les lundis à minuit
+    - cron: "0 0 * * 1"
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         include:
           - os: windows-latest
             node-version: 22
-      max-parallel: 2  # Limite à 2 tâches simultanées
+      max-parallel: 2
 
     steps:
       - name: Checkout code
